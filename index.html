@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Oukraina — a space for things to connect.">
+  <title>Oukraina</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    (() => {
+      const saved = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Oukraina home">
+      <img src="/assets/logo.svg" alt="" width="28" height="28">
+      <span>Oukraina</span>
+    </a>
+    <button class="theme-toggle" type="button" aria-label="Switch colour theme" title="Switch colour theme">
+      <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+    </button>
+  </header>
+
+  <main class="hero">
+    <div class="hero__mark" aria-hidden="true">
+      <img src="/assets/logo.svg" alt="">
+    </div>
+    <h1>Oukraina</h1>
+    <p class="hero__statement">A space for things to connect.</p>
+    <p class="hero__details">Knowledge. People. Tools. Communities. Possibilities.</p>
+  </main>
+
+  <footer class="site-footer">
+    <span>Oukraina OS</span>
+    <span>Open-ended by design.</span>
+  </footer>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
