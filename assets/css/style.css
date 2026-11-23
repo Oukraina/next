@@ -41,16 +41,19 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--fg); outline-of
   min-height: 76px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
-.brand { display: inline-flex; align-items: center; gap: 11px; font-size: 16px; font-weight: 600; letter-spacing: -0.025em; }
-.brand img { display: block; }
-:root[data-theme="dark"] .brand img,
-:root[data-theme="dark"] .hero__mark img { filter: invert(1); }
 .theme-toggle {
-  width: 38px; height: 38px; display: grid; place-items: center;
-  border: 1px solid var(--line); border-radius: 50%;
-  background: transparent; color: var(--muted); cursor: pointer; font-size: 19px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 19px;
 }
 .theme-toggle:hover { background: var(--control); color: var(--fg); }
 .hero {
@@ -64,10 +67,41 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--fg); outline-of
   text-align: center;
   padding: 100px 0 140px;
 }
-.hero__mark { width: 64px; height: 64px; margin-bottom: 30px; }
-.hero__mark img { width: 100%; height: 100%; }
-h1 { margin: 0; font-size: clamp(42px, 7vw, 64px); line-height: 1.05; font-weight: 620; letter-spacing: -0.065em; }
-.hero__statement { margin: 22px 0 0; color: var(--muted); font-size: clamp(19px, 3vw, 25px); letter-spacing: -0.035em; }\n.hero__explore { margin-top: 34px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 24px; color: var(--muted); font-size: 12px; transition: background-color 150ms ease, color 150ms ease; }\n.hero__explore:hover { background: var(--control); color: var(--fg); }\n.hero__explore span { margin-left: 5px; }
+.hero__mark { width: 54px; height: 54px; margin-bottom: 28px; }
+.hero__mark img { display: block; width: 100%; height: 100%; }
+:root[data-theme="dark"] .hero__mark img { filter: invert(1); }
+h1 {
+  margin: 0;
+  font-size: clamp(44px, 7vw, 68px);
+  line-height: 1.05;
+  font-weight: 620;
+  letter-spacing: -0.065em;
+}
+.hero__statement {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: clamp(17px, 2.5vw, 22px);
+  letter-spacing: -0.035em;
+}
+.hero__keywords {
+  margin: 42px 0 0;
+  color: var(--fg);
+  font-size: clamp(13px, 1.8vw, 16px);
+  letter-spacing: 0.005em;
+  line-height: 1.7;
+}
+.hero__explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 30px;
+  padding: 10px 0;
+  color: var(--muted);
+  font-size: 13px;
+  transition: color 150ms ease, gap 150ms ease;
+}
+.hero__explore:hover { color: var(--fg); gap: 14px; }
+.hero__explore span { font-size: 17px; line-height: 1; }
 .site-footer {
   padding: 28px 0 24px;
   border-top: 1px solid var(--line);
@@ -82,10 +116,20 @@ h1 { margin: 0; font-size: clamp(42px, 7vw, 64px); line-height: 1.05; font-weigh
 .footer-pirate { font-style: italic; color: var(--fg); }
 .footer-island { color: var(--muted); }
 .footer-earth { margin-top: 2px; color: var(--muted); }
-.footer-world { display: flex; flex-direction: column; align-items: center; gap: 7px; margin-top: 14px; color: var(--muted); font-family: "Plus Jakarta Sans", sans-serif; }
+.footer-world {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
 .footer-mark {
-  display: grid; place-items: center;
-  width: 25px; height: 25px;
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
   border: 1px solid var(--line);
   border-radius: 50%;
   color: var(--fg);
@@ -95,6 +139,7 @@ h1 { margin: 0; font-size: clamp(42px, 7vw, 64px); line-height: 1.05; font-weigh
 @media (max-width: 560px) {
   .site-header, .site-footer, .hero { width: min(100% - 36px, 1120px); }
   .hero { padding: 72px 0 100px; }
+  .hero__keywords { max-width: 310px; margin-top: 34px; }
   .site-footer { padding: 24px 0 20px; }
   .footer-social { gap: 10px; }
 }
