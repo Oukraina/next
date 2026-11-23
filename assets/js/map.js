@@ -12,7 +12,7 @@ const seedNodes = [
 const edges = [["ouk","mycelium"],["ouk","commons"],["ouk","open-projects"],["ouk","self-org"],["ouk","nodes"],["ouk","open-source"],["ouk","knowledge"],["mycelium","commons"],["nodes","open-projects"],["open-source","knowledge"],["self-org","nodes"]];
 let nodes = [...seedNodes];
 try { const saved = JSON.parse(localStorage.getItem("ouk-map-nodes") || "[]"); if (Array.isArray(saved)) nodes.push(...saved); } catch {}
-let activeFilter = "all";
+nodes.filter(n=>n.id.startsWith("custom-")).forEach(n=>edges.push(["ouk",n.id]));\nlet activeFilter = "all";
 let selectedId = null;
 const graph = document.querySelector("#graph");
 const edgeLayer = document.querySelector("#edges");
