@@ -15,9 +15,34 @@ This is where we prototype ideas, interfaces, tools and ways of connecting peopl
 - Avoid decorative branding and unnecessary dependencies.
 - Let projects and communities develop their own visual identities.
 
+## Identity
+
+**Oukraina — Україна**  
+**Art of the states technology**
+
 ## Development
 
 This first version uses plain HTML, CSS and JavaScript. No build step or framework is required.
+
+## Commit convention
+
+Use Conventional Commits: `type: short imperative description`.
+
+Examples:
+
+- `feat: add hero section`
+- `fix: correct footer spacing`
+- `chore: update dependencies`
+- `docs: describe deployment process`
+- `refactor: simplify theme handling`
+- `style: adjust typography`
+- `test: add metadata checks`
+
+Prefer lowercase, concise English descriptions. Keep one logical change per commit. Use `feat!` or a `BREAKING CHANGE:` footer only when a change is intentionally incompatible.
+
+## Social previews
+
+The homepage includes Open Graph and X card metadata. The current default preview is `/assets/og-image.svg`. Add page-specific metadata when introducing distinct shareable pages or content types.
 
 ## Deployment
 
