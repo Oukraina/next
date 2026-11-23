@@ -1,24 +1,45 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Oukraina — a space for things to connect.">
-  <title>Oukraina</title>
+  <meta name="description" content="Oukraina — Art of the states technology.">
+  <title>Oukraina — Україна</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Oukraina">
+  <meta property="og:title" content="Oukraina — Україна">
+  <meta property="og:description" content="Art of the states technology.">
+  <meta property="og:url" content="https://next.oukraina.com/">
+  <meta property="og:image" content="https://next.oukraina.com/assets/og-image.svg">
+  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="og:image:alt" content="Oukraina — Україна">
+
+  <!-- X / Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Oukraina — Україна">
+  <meta name="twitter:description" content="Art of the states technology.">
+  <meta name="twitter:image" content="https://next.oukraina.com/assets/og-image.svg">
+
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/style.css">
   <script>
     (() => {
-      const saved = localStorage.getItem("theme");
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+      try {
+        const saved = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
     })();
   </script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="/" aria-label="Oukraina home">
+    <a class="brand" href="/" aria-label="Oukraina — Україна">
       <img src="/assets/logo.svg" alt="" width="28" height="28">
       <span>Oukraina</span>
     </a>
@@ -31,9 +52,8 @@
     <div class="hero__mark" aria-hidden="true">
       <img src="/assets/logo.svg" alt="">
     </div>
-    <h1>Oukraina</h1>
-    <p class="hero__statement">A space for things to connect.</p>
-    <p class="hero__details">Knowledge. People. Tools. Communities. Possibilities.</p>
+    <h1>Oukraina <span lang="uk">— Україна</span></h1>
+    <p class="hero__statement">Art of the states technology</p>
   </main>
 
   <footer class="site-footer">
